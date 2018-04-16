@@ -48,6 +48,6 @@ Add additional notes about how to deploy this on a live system
 
 * **Reid Brown** - *Programmer* - [reidhbr](https://github.com/reidhbr)
 * **Prem Chandrasekhar** - *Prem* - [prchandr](https://github.com/prchandr)
-* **Ben Namovicz** - *Prochanic* - [Feed.]<https:officialfeedband.com>
+* **Ben Namovicz** - *Prochanic* - [Feed.](https:officialfeedband.com)
 * **Stuart Nevans-Locke** - *Programmer* - [stnevans](https://github.com/stnevans)
 
