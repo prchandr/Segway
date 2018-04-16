@@ -173,7 +173,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void endThread(){
         sendCheck = false;
-        thread.interrupt();
-        thread = null;
+        if(thread != null{
+            thread.interrupt();
+            thread = null;
+        }
     }
 }
