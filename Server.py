@@ -47,6 +47,7 @@ try:
         else:
                 print('Error occurred with data:   ' + str(dataArray) + '\n')
 except(KeyboardInterrupt, SystemExit):
+    ser.write(chr(127) + chr(44)+ chr(127))
     s.shutdown(socket.SHUT_RDWR)
     conn.close()
     s.close()
