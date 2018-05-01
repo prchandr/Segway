@@ -1,8 +1,5 @@
 import socket, math, serial, time
 
-__author__ = "Stian Sandve"
-__license__ = "GPLv3"
-__version__ = "1.1.1"
 
 from enum import Enum
 
