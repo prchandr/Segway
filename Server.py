@@ -249,6 +249,8 @@ while True:
                 print('rPWM ' + str(rPWM) + '\n')
                 #print('pitch ' + pitch)
                 count = rPWM
+                pidResult = pid.compute((abs(pitch)/180*255-127)*sensitivity+127)
+                print(pidResult)
                 #print(chr (count))
                 #right,left
                 if roll>0:
