@@ -230,7 +230,7 @@ while True:
     left = 127
     rPWM = 127
     sensitivity = 10
-
+    pid = PID(1,0,0,127,direct)
     ser = serial.Serial('/dev/ttyACM0', 9600)
 
     try:
