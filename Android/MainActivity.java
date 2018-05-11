@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                     thread.start();
-                    connect.setBackgroundColor(Color.GREEN);
-                    disconnect.setBackgroundColor(Color.GREEN);
+                    connect.setBackgroundColor(Color.RED);
+                    disconnect.setBackgroundColor(Color.RED);
                 }
             }
         });
@@ -137,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(sendCheck) {
                     endThread();
-                    connect.setBackgroundColor(Color.RED);
-                    disconnect.setBackgroundColor(Color.RED);
+                    connect.setBackgroundColor(Color.GREEN);
+                    disconnect.setBackgroundColor(Color.GREEN);
                 }
             }
         });
