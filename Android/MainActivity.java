@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         port = (EditText) findViewById(R.id.port);
         connect = (Button) findViewById(R.id.connect);
         disconnect = (Button) findViewById(R.id.disconnect);
-        connect.setBackgroundColor(Color.RED);
-        disconnect.setBackgroundColor(Color.RED);
+        connect.setBackgroundColor(Color.GREEN);
+        disconnect.setBackgroundColor(Color.GREEN);
 
         changed = false;
 
