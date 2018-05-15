@@ -1,4 +1,4 @@
-package io.github.reidhbr.testing;
+package com.prchandr.segway;
 
 import android.graphics.Color;
 import android.hardware.Sensor;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.io.DataOutputStream;
@@ -29,9 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button connect;
     Button disconnect;
-    EditText ipAddress;
-    EditText port;
     TextView dataView;
+    TextView statusView;
 
     String rotation;
     String dataSent;
@@ -40,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
     float[] orientationData;
     boolean sendCheck;
 
-    private static final String TAG = "MainActivity";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         dataView = (TextView) findViewById(R.id.text);
+        statusView = (TextView) findViewById(R.id.status);
         sendCheck = false;
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
@@ -57,13 +54,14 @@ public class MainActivity extends AppCompatActivity {
         orientationData = new float[]{0, 0, 0};
         dataSent = "";
 
-        ipAddress = (EditText) findViewById(R.id.ipAddress);
-        port = (EditText) findViewById(R.id.port);
         connect = (Button) findViewById(R.id.connect);
         disconnect = (Button) findViewById(R.id.disconnect);
+
+
         connect.setBackgroundColor(Color.GREEN);
         disconnect.setBackgroundColor(Color.GREEN);
 
+        statusView.setText("Disconnected");
         changed = false;
 
         orientationListener = new SensorEventListener() {
@@ -88,10 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             try {
-                                String host = ipAddress.getText().toString();
-                                int connectionPort = Integer.parseInt(port.getText().toString());
-                                socket = new Socket(host, connectionPort);
-
+                                socket = new Socket("10.0.0.1", 100);
                                 outputStream = new DataOutputStream(socket.getOutputStream());
                                 while (sendCheck) {
                                     if (changed) {
@@ -117,17 +112,19 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
                     thread.start();
+                    statusView.setText("Sending Data...");
                     connect.setBackgroundColor(Color.RED);
                     disconnect.setBackgroundColor(Color.RED);
                 }
             }
         });
 
-       disconnect.setOnClickListener(new View.OnClickListener() {
+        disconnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(sendCheck) {
                     endThread();
+                    statusView.setText("Disconnected");
                     connect.setBackgroundColor(Color.GREEN);
                     disconnect.setBackgroundColor(Color.GREEN);
                 }
