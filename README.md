@@ -2,33 +2,28 @@
 
 This project aims to revive the old segway made in 2010 by switching out the VEX Cortex that used to control the segway with a Raspberry Pi. The benefits of this are that the RasPi is significantly smaller, cheaper, easier to work with, and more compatible with accessories. We started the project with a steel frame for the segway, two old wheelchair motors and wheels, and two Victor 883 Motor Controllers for each motor. 
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
 motorSignals.ino is arduino code. 
-Server.py is meant to be run on a raspberry pi
+Server.py is meant to be run on a Raspberry Pi
 ```
 
 ```
 To run it, simply compile the arduino code onto some arduino and run
 sudo python Server.py
 ```
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
 
 
-## Future Work
+## How it Works
 
-The segway can be improved by redoing the circuitry and replacing the current electrical components with newer parts.
+The phone is mounted to the handlebar of the segway. With the phone connected to the Raspberry Pi's access point and Server.py running, use the app to send angle data to the RasPi.    
+
+## Future Improvement
+
+The segway can be improved by redoing the circuitry and replacing the current electrical components with newer parts. The constants for the PID have to be further tested and tuned.
 
 ## Authors
 
