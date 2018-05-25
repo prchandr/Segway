@@ -39,15 +39,16 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Needs an accelerometer and magnetometer sensor on an Android phone
 
+## Future Work
+
+The segway can be improved by redoing the electrical components 
 
 ## Authors
 
 * **Reid Brown** - *Programmer* - [reidhbr](https://github.com/reidhbr)
-* **Prem Chandrasekhar** - *Prem* - [prchandr](https://github.com/prchandr)
-* **Ben Namovicz** - *Prochanic* - [Feed.](https:officialfeedband.com)
+* **Prem Chandrasekhar** - *Mechanic* - [prchandr](https://github.com/prchandr)
+* **Ben Namovicz** - *Mechanic* - [Feed.](https:officialfeedband.com)
 * **Stuart Nevans-Locke** - *Programmer* - [stnevans](https://github.com/stnevans)
 
