@@ -17,7 +17,7 @@ Server.py is meant to be run on a raspberry pi
 
 ```
 To run it, simply compile the arduino code onto some arduino and run
-python Server.py
+sudo python Server.py
 ```
 ## Deployment
 
@@ -25,11 +25,10 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-Needs an accelerometer and magnetometer sensor on an Android phone
 
 ## Future Work
 
-The segway can be improved by redoing the electrical components 
+The segway can be improved by redoing the circuitry and replacing the current electrical components with newer parts.
 
 ## Authors
 
